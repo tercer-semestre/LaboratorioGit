@@ -14,11 +14,13 @@ import java.io.Serializable;
 public class Directivo extends Persona implements Serializable {
     private String cargo;
     private double sueldo;
+    private boolean calvo;
 
-    public Directivo(String cargo, double sueldo, double edad, String nombre, String codigo, String apodo, String email) {
+    public Directivo(String cargo, double sueldo, boolean calvo, double edad, String nombre, String codigo, String apodo, String email) {
         super(edad, nombre, codigo, apodo, email);
         this.cargo = cargo;
         this.sueldo = sueldo;
+        this.calvo = calvo;
     }
 
     public String getCargo() {
@@ -37,11 +39,18 @@ public class Directivo extends Persona implements Serializable {
         this.sueldo = sueldo;
     }
 
+    public boolean isCalvo() {
+        return calvo;
+    }
+
+    public void setCalvo(boolean calvo) {
+        this.calvo = calvo;
+    }
+
     @Override
     public String toString() {
-        return "Directivo{" + "cargo=" + cargo + ", sueldo=" + sueldo + '}';
+        return "Directivo{" + "cargo=" + cargo + ", sueldo=" + sueldo + ", calvo=" + calvo + '}';
     }
-    
-    
+
     
 }
