@@ -6,16 +6,20 @@
 package modelo;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
 
 /**
  *
  * @author MANUEL BERMUDEZ
  */
-public class Estudiante extends Persona implements Serializable{
+public class Estudiante extends Persona implements Serializable {
+
     private String carrera;
     private String semestre;
     private String materiaFav;
-    private double prom;
+    private Double prom;
 
     public Estudiante(String carrera, String semestre, String materiaFav, double prom, double edad, String nombre, String codigo, String apodo, String email) {
         super(edad, nombre, codigo, apodo, email);
@@ -61,10 +65,17 @@ public class Estudiante extends Persona implements Serializable{
     public String toString() {
         return "Estudiante{" + "carrera=" + carrera + ", semestre=" + semestre + ", materiaFav=" + materiaFav + ", prom=" + prom + '}';
     }
-    
-    public void agregarEstudiante(){
-        
+
+    public void agregarEstudiante(String carrera, String semestre, String favorita, Double promedio) {
+        ArrayList<String> Personas = new ArrayList();
+        Personas.add(carrera);
+        Personas.add(semestre);
+        Personas.add(favorita);
+        Personas.add(promedio.toString());
+        imprimirEstudiantes(Personas);
+
     }
-    
-    
+    public void imprimirEstudiantes(ArrayList lista){
+        System.out.println(lista);
+    }
 }
