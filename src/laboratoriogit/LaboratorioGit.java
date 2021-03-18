@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package laboratoriogit;
 
 import java.util.ArrayList;
@@ -10,11 +5,6 @@ import java.util.List;
 import java.util.Scanner;
 import modelo.Persona;
 
-
-/**
- *
- * @author MANUEL BERMUDEZ
- */
 public class LaboratorioGit {
 
     /**
@@ -26,16 +16,13 @@ public class LaboratorioGit {
         
         Scanner  entrada = new Scanner(System.in); //crea el scanner para ingresar datos por teclado
         String elecc;
-        System.out.println("Desea ingresar mas Personas?");
+        System.out.println("Desea ingresar mas Personas? ");
         elecc=entrada.nextLine();
         while("si".equals(elecc)){
             
             String elecc2;
-            System.out.print("Ingrese su rol");
+            System.out.print("Ingrese su rol ");
             elecc2=entrada.nextLine();
         }
-        
-    }
-    
-    
+    } 
 }
