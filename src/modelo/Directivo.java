@@ -1,16 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package modelo;
 
 import java.io.Serializable;
 
-/**
- *
- * @author MANUEL BERMUDEZ
- */
 public class Directivo extends Persona implements Serializable {
     private String cargo;
     private double sueldo;
@@ -41,7 +32,4 @@ public class Directivo extends Persona implements Serializable {
     public String toString() {
         return "Directivo{" + "cargo=" + cargo + ", sueldo=" + sueldo + '}';
     }
-    
-    
-    
 }
