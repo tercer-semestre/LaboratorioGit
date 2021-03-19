@@ -2,34 +2,56 @@ package modelo;
 
 import java.io.Serializable;
 
-public class Profesor extends Persona implements  Serializable{
-    private String materia;
-    private String salon;
+public class Profesor extends Persona implements Serializable{
+    private String nombre;
+    private String apellidos;
+    private double edad;
+    private boolean casado;
+    private boolean especialista;
 
-    public Profesor(String materia, String salon, byte edad, String nombre, String codigo, String apodo, String email) {
-        super(edad, nombre, codigo, apodo, email);
-        this.materia = materia;
-        this.salon = salon;
+    public String getNombre() {
+        return nombre;
     }
 
-    public String getMateria() {
-        return materia;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
-    public void setMateria(String materia) {
-        this.materia = materia;
+    public String getApellidos() {
+        return apellidos;
     }
 
-    public String getSalon() {
-        return salon;
+    public void setApellidos(String apellidos) {
+        this.apellidos = apellidos;
     }
 
-    public void setSalon(String salon) {
-        this.salon = salon;
+    public double getEdad() {
+        return edad;
+    }
+
+    public void setEdad(double edad) {
+        this.edad = edad;
+    }
+
+    public boolean isCasado() {
+        return casado;
+    }
+
+    public void setCasado(boolean casado) {
+        this.casado = casado;
+    }
+
+    public boolean isEspecialista() {
+        return especialista;
+    }
+
+    public void setEspecialista(boolean especialista) {
+        this.especialista = especialista;
     }
 
     @Override
     public String toString() {
-        return "Profesor{" + "materia=" + materia + ", salon=" + salon + '}';
+        return "Profesor{" + "nombre=" + nombre + ", apellidos=" + apellidos + ", edad=" + edad + ", casado=" + casado + ", especialista=" + especialista + '}';
     }
+
 }
